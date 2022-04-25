@@ -1,0 +1,103 @@
+header {
+    position: relative;
+    background: green;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+h1 {
+    font-size: 20px;
+    color: white;
+        
+}
+
+body {
+    background: #CCCCCC;
+
+
+}
+
+.area1 {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 190px;
+}
+
+.area2 {
+    display: block;
+    margin-top: 36px;
+    margin-left: 190px;
+
+}
+
+.botao1 {
+    position: relative;
+    display: inline-block;
+    left: 240px;
+    top: 2px;
+    bottom: 20px;
+   
+
+}
+
+.botao2 {
+    position: relative;
+    display: inline-block;
+    left: 260px;
+    top: 2px;
+    bottom: 20px;
+}
+
+.botao3 {
+    position: relative;
+    top: 2px;
+    margin: 20px;
+    display: inline-block;
+    left: 315px;
+
+}
+
+
+#textoAlerta {
+    position: relative;
+    color: black;
+    display: none;
+    left: 236px;
+    bottom: 19px;
+    margin-right: -231.5px;
+
+ 
+}
+
+
+textarea {
+    resize: none;
+    border-radius: 4px;
+
+}
+
+li {
+    display: inline-block;
+    padding-top: 40px;
+
+}
+
+footer {
+    position: relative;
+    background: green;
+    padding-bottom: 7px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    
+}
+footer li {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+
