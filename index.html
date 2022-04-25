@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<script>
+	alert("Por favor não utilize caracteres especiais, nem números, somente letras minúsculas.")
+</script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Challenge Alura</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Codificador de texto</h1>	
+		</header>
+		<main>
+			<div>
+				<ul>
+            		<li>
+            			<textarea class="area1" name="texto" id="texto" rows="20" cols="40" placeholder="Digite aqui o texto que deseja criptografar"></textarea>
+            			<p id="textoAlerta">⚠️ Por favor desative o CapsLock.</p>
+            			<input class="botao1" type="submit" value="Criptografar" id="buttonCripto">
+            			<input class="botao2" type="submit" value="Descriptografar" id="buttonDescripto">
+            		</li>
+            		<li>
+            			<textarea class="area2" name="saida" id="saida" rows="20" cols="40" placeholder="Texto criptografado!"></textarea>
+            			<input class="botao3" type="submit" value="Copiar" id="buttonCopy">
+            		</li>
+        </main>
+		<footer>
+			<div>
+				<li><a href="https://www.instagram.com/dan_developer2022/" target="_blank"><img src="instagram.png" alt="Icone do Instagram"></a></li>
+            	<li><a href="https://www.linkedin.com/in/daniel-fonseca-silva-3b8b94236/" target="_blank"><img src="linkedin.png" alt="Icone do Linkedin"></a></li>
+            	<li><a href="https://github.com/dan-developer2022" target="_blank"><img src="github.png" alt="Icone do GitHub"></a></li>
+				<p class="copyright">&copy; Challenge Alura - Desenvolvido por Daniel Fonseca - 2022</p>
+			</div>
+		</footer>
+	</body>
+
+	<script type="text/javascript" src="script.js"></script>
+
+		<script>
+
+				var inputEntrada = document.querySelector("#texto");
+			    var inputSaida = document.querySelector("#saida");
+			    var buttonCrip = document.querySelector("#buttonCripto");
+			    var buttonDescrip = document.querySelector("#buttonDescripto");
+			    var buttonCopy = document.querySelector("#buttonCopy");
+			    var buttonLimpar = document.querySelector("#buttonLimpar");
+
+
+			re = new RegExp("^[a-z/s ]+$");
+			if(texto.match(re)){
+				let novoTexto = texto.replace(/e/g, "enter");
+					novoTexto = texto.replace(/i/g, "imes");
+					novoTexto = texto.replace(/a/g, "ai");
+					novoTexto = texto.replace(/o/g, "ober");
+					novoTexto = texto.replace(/u/g, "ufat");
+				}
+
+        	function criptografar(){
+	            var text = inputEntrada.value;
+	            var result = text.replace(/e/g, "enter");
+	            var result2 = result.replace(/i/g, "imes");
+	            var result3 = result2.replace(/a/g, "ai");
+	            var result4 = result3.replace(/u/g, "ufat");
+	            var result5 = result4.replace(/o/g, "ober");
+	            var result6 = result5.replace(/é/g, "adsu");
+	            var result7 = result6.replace(/í/g, "omnes");
+	            var result8 = result7.replace(/á/g, "inem");
+	            var result9 = result8.replace(/ú/g, "nuum");
+	            var result10 = result9.replace(/ó/g, "umni");
+	            var result11 = result10.replace(/ã/g, "idem");
+	            var result12 = result11.replace(/ç/g, "vad")
+
+
+	            inputSaida.value = result12;
+            }
+
+	        function descriptografar(){
+	            var text = inputEntrada.value;
+	            var result = text.replace(/enter/g, "e");
+	            var result2 = result.replace(/imes/g, "i");
+	            var result3 = result2.replace(/ai/g, "a");
+	            var result4 = result3.replace(/ufat/g, "u");
+	            var result5 = result4.replace(/ober/g, "o");
+	            var result6 = result5.replace(/adsu/g, "é");
+	            var result7 = result6.replace(/omnes/g, "í");
+	            var result8 = result7.replace(/inem/g, "á");
+	            var result9 = result8.replace(/nuum/g, "ú");
+	            var result10 = result9.replace(/umni/g, "ó");
+	            var result11 = result10.replace(/idem/g, "ã");
+	            var result12 = result11.replace(/vad/g, "ç")
+
+	            inputSaida.value = result12;
+			} 
+
+	        function copiar(){
+	            var copy = inputEntrada.value;
+	            navigator.clipboard.writeText(copy);
+	        }
+		
+	        buttonCrip.onclick = criptografar;
+	        buttonDescrip.onclick = descriptografar;
+	        buttonCopy.onclick = copiar;
+    </script>
+</html>
